@@ -1,0 +1,23 @@
+class RequisitionCounter:
+    def __init__(self):
+        self.counter = 0
+
+    def staff_info(self):
+        self.counter += 1
+        requisition_id = 10000 + self.counter
+        
+        date = input("Enter the date (YYYY-MM-DD): ")
+        staff_id = input("Enter the Staff ID: ")
+        staff_name = input("Enter the Staff Name: ")
+        
+        return {
+            "Date": date,
+            "Staff ID": staff_id,
+            "Staff Name": staff_name,
+            "Requisition ID": requisition_id
+        }
+
+
+requisition = RequisitionCounter()
+info = requisition.staff_info()
+print(info)
